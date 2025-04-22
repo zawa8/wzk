@@ -1,0 +1,37 @@
+{
+  "name": "kwztr",
+  "version": "1.0.3",
+  "description": "kwztr is a module to transliterate indian,srilankan,nepal,bangladesh languages",
+  "main": "kwztr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zava8/kwztr.git"
+  },
+  "keywords": [
+    "language",
+    "transliterator",
+    "transliterate",
+    "hindi",
+    "tamil",
+    "kannada",
+    "malayalam",
+    "telugu",
+    "sinhala",
+    "bengali",
+    "marathi",
+    "nepali",
+    "punjabi",
+    "gujarati",
+    "odia",
+    "oriya"
+  ],
+  "author": "vimalkg@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zava8/kwztr/issues"
+  },
+  "homepage": "https://github.com/zava8/kwztr#readme"
+}
