@@ -1,6 +1,25 @@
 const duztr = require('./duztr.js');
 class wzk {
-  transliterate_dom_node(node_arg, a2b="u2i") {
+  itr(inputstr,from,tu) { // console.log("wzk::itr" + "\n"); 
+    let ioft = { i: inputstr , o: {} , f: from, t:tu } ;
+    	const tu_langs = [
+		"inglish", "hindi", "bangla", "gurmukhi", "guzrati",
+		"oriya", "telugu", "kannada", "malayalam",
+		"sinhala", "tamil", "korean", "russian"
+	];
+    if (tu_langs.includes(tu)) {
+		ioft = {i:inputstr, o:{}, f:from, t:tu}
+		// console.log("yes includes calling duztr" + "\n"); 
+		duztr(ioft);
+		return(ioft.o[tu]);
+	}
+    else { return inputstr; }    
+  }
+  /////////////////
+  ioft_tr(ioft) { duztr(ioft); }
+  /////////////////
+		
+  transliterate_dom_node(node_arg,tu) {
     let dikt_pair_list = [];
     let curr_dikt_pair = null;
     let curr_node_text = "";
@@ -31,18 +50,11 @@ class wzk {
       spanNode.appendChild(curr_dikt_pair.tekstNode);
     }
     ztred_span_list = node_arg.getElementsByClassName('ztred');
-
-    switch(a2b) {
-      case "u2i" :
-        for (let i = 0; i < ztred_span_list.length; ++i)
-        {
-          nekst_ztred_span = ztred_span_list[i];
-          let ioz = { i: nekst_ztred_span.textContent , o: "" , z: "u2i" } ;
-          duztr(ioz);
-          nekst_ztred_span.textContent = ioz.o;
-        }
-        break;
-    }
+	for (let i = 0; i < ztred_span_list.length; ++i)
+	{
+	  nekst_ztred_span = ztred_span_list[i];
+	  nekst_ztred_span.textContent = this.itr(nekst_ztred_span.textContent,from,tu);
+	}
   }
   untransliterate_dom_node() {
     let nodes = document.getElementsByClassName('ztred');
@@ -52,11 +64,6 @@ class wzk {
       if(node.innerText.charCodeAt(0) != node.innerText.charCodeAt(0)) continue ;
       node.innerText = node.dataset.oldtekst;
     }
-  }
-  transliterate(engloutfstr,a2b="u2i") {
-    let ioz = { i: engloutfstr , o: "" , z: a2b } ;
-    duztr(ioz);
-    return(ioz.o);
   }
 }
 module.exports = wzk

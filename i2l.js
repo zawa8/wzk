@@ -12,47 +12,67 @@
 // කඛජඣටඨඩඪතථදධනපඵබභමයරලවශසහඅ
 // கKஜZடTdDதJqQநபfbBமயரலவஶஸஹஅ
 ///////[ɦꟈđꞇṅᴀ]ɦԃćńà
-const i2l = (ioz) => {
+const i2l = (ioft) => {
 	//alert("abc");
-	const i2il_arr = [
-		"कखजझटठडढतथदधनपफबभमयरलशसहअव","কখজঝটঠডঢতথদধনপফবভমযরলশসহঅw",
-		"ਕਖਜਝਟਠਡਢਤਥਦਧਨਪਫਬਭਮਯਰਲਸ਼ਸਹਅਵ","કખજઝટઠડઢતથદધનપફબભમયરલશસહઅવ",
-		"କଖଜଝଟTଡଢତଥଦଧନପଫବଭମଯରଲଶସହଅଵ","కఖజఝటఠడఢతథదధనపఫబభమయరలశసహఅవ",
-		"ಕಖಜಝಟಠಡಢತಥದಧನಪಫಬಭಮಯರಲಶಸಹಅವ","കഖജഝടഠഡഢതഥദധനപഫബഭമയരലശസഹഅവ",
-		"කඛජඣටඨඩඪතථදධනපඵබභමයරලශසහඅව","கKஜZடTdDதJqQநபfbBமயரலஶஸஹஅவ",
-		"ㅋKㅈZㅌT다DjJqQㄴㅍf바Bㅁㅑ라lSㅅㅎㅏ봐",
-		"කKzZtTдДtTдДнпфбБмйрлщшහඅව",
-	];
+	const i2il_dikt = {
+		hindi: "कखजझटठडढतथदधनपफबभमयरलशसहअव",
+		bangla: "কখজঝটঠডঢতথদধনপফবভমযরলশসহঅw",
+		gurmukhi: "ਕਖਜਝਟਠਡਢਤਥਦਧਨਪਫਬਭਮਯਰਲਸ਼ਸਹਅਵ",
+		guzrati: "કખજઝટઠડઢતથદધનપફબભમયરલશસહઅવ",
+		oriya: "କଖଜଝଟTଡଢତଥଦଧନପଫବଭମଯରଲଶସହଅଵ",
+		telugu: "కఖజఝటఠడఢతథదధనపఫబభమయరలశసహఅవ",
+		kannada: "ಕಖಜಝಟಠಡಢತಥದಧನಪಫಬಭಮಯರಲಶಸಹಅವ",
+		malayalam: "കഖജഝടഠഡഢതഥദധനപഫബഭമയരലശസഹഅവ",
+		sinhala: "කඛජඣටඨඩඪතථදධනපඵබභමයරලශසහඅව",
+		tamil: "கKஜZடTdDதJqQநபfbBமயரலஶஸஹஅவ",
+		korean: "ㅋKㅈZㅌT다DjJqQㄴㅍf바Bㅁㅑ라lSㅅㅎㅏ봐",
+		russian: "kKzZtTдДtTдДнпфбБмйрлщшɦa",
+	};
 	/* https://tandem.net/blog/russian-alphabet
-	 *  "කKzZtTдДtTдДнпфбБмйрлщшහඅව"
+	 *  "kKzZtTдДtTдДнпфбБмйрлщшහඅව"
 	 * К б_b ,  д_d  , з_z , й_y , k_k     л_l  м_m   р_r   п_p   
 	 *   н_n в_w
 	 * */
-	const inputLength = ioz.i.length;
-	ioz.o = ''; 
-	const oarr = Array(11).fill("");
+	const inputLength = ioft.i.length;
+	//ioft.o = {}; 
+	//const oarr = Array(11).fill("");
 	let indeks = 0; 
 	let curr_chr = ''; 
 	// let nekst_char: string = '';
 	const hinchars = "kKzZtTdDjJqQnpfbBmyrlSsɦA"; // ɦa"; 
+	const i2il_dikt_keys = Object.keys(i2il_dikt);
 //////////////////
-//	const ing32: string = ioz.i.replace(
+//	const ing32: string = ioft.i.replace(
 //		/([KZTDJQBS])/g, function(v) { return v.toLowerCase()+"h"; }
 //		).replace(/j/g, 'т').replace(/q/g, 'ԃ');
 //////////////////
 	while (indeks < inputLength) {
-		curr_chr = ioz.i[indeks];
+		curr_chr = ioft.i[indeks];
 		const chr_indeks = hinchars.indexOf(curr_chr); 
-		for (let i = 0; i < i2il_arr.length; i++) {
-			if (chr_indeks > -1) { oarr[i] += i2il_arr[i][chr_indeks]; }
-			else { oarr[i] += curr_chr; }
+		//for (let i = 0; i < i2il_dikt.length; i++) {
+		switch(ioft.t)
+		{
+			case "inglish":				
+			break;
+			case "all":
+				i2il_dikt_keys.forEach(key => {
+					if (chr_indeks > -1) { ioft.o[key] += i2il_dikt[key][chr_indeks]; }
+					else { ioft.o[key] += curr_chr; }
+				});						
+			break;
+			default:
+				if (i2il_dikt_keys.includes(ioft.t)) {
+					if (chr_indeks > -1) { ioft.o[ioft.t] += i2il_dikt[ioft.t][chr_indeks]; }
+					else { ioft.o[ioft.t] += curr_chr; }					
+				}
 		}
     	indeks++;
   	}
 
-	ioz.o =
+	/*
+	 * ioft.o =
 		"modern_hinԃi: " + oarr[0] + "\n\n" +
-		"modern_ing4:[a-z]+4αԃɦт: " + ioz.i + "\n\n" +
+		"modern_ing4:[a-z]+4αԃɦт: " + ioft.i + "\n\n" +
 		"modern_punzαbi gurmukhi: " + oarr[2] + "\n\n" +
 		"modern_bαnglα bengαli: " + oarr[1] + "\n\n" +
 		"modern_тelugu: " + oarr[5] + "\n\n" +
@@ -64,13 +84,14 @@ const i2l = (ioz) => {
 		"modern_russian: " + oarr[11] + "\n\n" +
         "modern_sinhalα: " + oarr[8] + "\n\n" +
         "modern_guzrαтi: " + oarr[3];
-	ioz.o = ioz.o.replace(
+	ioft.o = ioft.o.replace(
 		/([KZTDJQBS])/g, function(v) { return v.toLowerCase()+"h"; }
 		).replace(/j/g, 'т').replace(/q/g, 'ԃ');
-	ioz.o = ioz.o + "\n\ninglish4:4αԃɦт.\n" +
+	ioft.o = ioft.o + "\n\ninglish4:4αԃɦт.\n" +
 		"ααm ααԃmi ki zrurт : bhαsα anek , likhαi anek , sbme 8aiueohcg ek.\n" +
 		"wn wowels(8αiueohcg) wn indiα wn bhαrT great indiα\n" +
 		"https://ztr8.vercel.app/ -> font\n^*englosoftw8utf.ttf/woff2 *=tamil/hindi/korean/russian/sinhala/etc.../\nandroid/chrome/firefox/windows/linux\n";
+		*/
 }
 module.exports = i2l
 
@@ -109,7 +130,7 @@ module.exports = i2l
 //(?1A)(?2k)(?3z)(?4t)(?5d)(?6T)(?7D)(?8n)(?9p)(?10f)(?11b)(?12m)(?13y)(?14r)(?15L)(?16v)(?17s)(?18H)
 //(?19)(?20)(?21)(?22)(?23)(?24)(?25)(?26)(?27)(?28)(?29)
 
-// curr_chr = ioz.i.value[indeks];
+// curr_chr = ioft.i.value[indeks];
 // curr_char_code = curr_chr.charCodeAt();
 // curr_lang_code = (curr_char_code/0x80)>>0 ;
 // curr_char_modulo = curr_char_code % 0x80 ;

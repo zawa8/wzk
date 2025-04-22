@@ -22,15 +22,15 @@
 **********************
 **********************
 **********************/
-const Hh2phonetic_H = (ioz) => { 
-    ioz.i = ioz.i.replaceAll(
+const Hh2phonetic_H = (ioft) => { 
+    ioft.i = ioft.i.replaceAll(
       /H/g, "h").replaceAll(
       /(\s)h/g, "$1H").replaceAll(
       /([^kgcꞇćjztdpbswटडपबसԃᴛ])h/ig, "$1H");
 }
 //////// ñṅ ꟈԃ[ɦꟈđꞇṅᴀ]ɦԃćńàᴀ
-const Nn2phonetic_N = (ioz) => {
-    ioz.i = ioz.i.replaceAll(
+const Nn2phonetic_N = (ioft) => {
+    ioft.i = ioft.i.replaceAll(
 		/N/g,"n").replaceAll(
 		/n([cgk])\b/ig,"ṅ$1").replaceAll(/\bn/ig,"ñ").replaceAll(
 		/([a-z])nk/ig,"$1ṅk").replaceAll(/oung/ig,"ouṅg").replaceAll(
@@ -57,8 +57,8 @@ const Nn2phonetic_N = (ioz) => {
 		/ñ/g,"n");
 }
 // à
-const Ww2vv = (ioz) => {
-    ioz.i = ioz.i.replaceAll(
+const Ww2vv = (ioft) => {
+    ioft.i = ioft.i.replaceAll(
 		/W/g,"w").replaceAll(
 		/away/ig,"àⱱày").replaceAll(/war([ey])/ig,"ⱱàr$1").replaceAll(/wa([nrs])/ig,"ⱱα$1").replaceAll(
 		/who/ig,"ẃहo").replaceAll(/wr/ig,"ẃr").replaceAll(/\bw/ig,"ⱱ").replaceAll(
@@ -71,8 +71,8 @@ const Ww2vv = (ioz) => {
 		/ẃ/g,"w").replaceAll(/ⱱ/g,"W");
 }
 // àα
-const Aa2phonetic_Aa = (ioz) => {
-	ioz.i = ioz.i.replaceAll(
+const Aa2phonetic_Aa = (ioft) => {
+	ioft.i = ioft.i.replaceAll(
 		/A/g,"a").replaceAll(
 		/aft/ig,"αft").replaceAll(/aw([kf\s])/ig,"αw$1").replaceAll(
 		/\bar([cekmst])\b/ig,"αr$1").replaceAll(/guar/ig,"guαr").replaceAll(
@@ -101,19 +101,20 @@ const Aa2phonetic_Aa = (ioz) => {
 	/las([skmt])/ig,'lαs$1');
 }
 // ɦ ⱱ
-const e2i = (ioz) => {
-      //Hh2phonetic_H(ioz);
-      //Nn2phonetic_N(ioz); 
-      //Ww_to_vv(ioz);	
-      //Aa2phonetic_Aa(ioz);
-      //ioz.i.value = ioz.i.value.replaceAll(/c/ig,'ć'); ///ꞇ
+const e2i = (ioft) => {
+      //Hh2phonetic_H(ioft);
+      //Nn2phonetic_N(ioft); 
+      //Ww_to_vv(ioft);	
+      //Aa2phonetic_Aa(ioft);
+      //ioft.i.value = ioft.i.value.replaceAll(/c/ig,'ć'); ///ꞇ
       // ɦHɦĥ
-      //ioz.i = ioz.i.replaceAll(/H/g,'ɦ').replaceAll(/N/g,'ń').replaceAll(/à/g,'a'); //α/g,'A').replaceAll();
-      ioz.i = ioz.i.toLowerCase();
-	  ioz.i = ioz.i.replaceAll(/j/g,'z').replaceAll(/q/g,'k').replaceAll(
+      //ioft.i = ioft.i.replaceAll(/H/g,'ɦ').replaceAll(/N/g,'ń').replaceAll(/à/g,'a'); //α/g,'A').replaceAll();
+      ioft.i = ioft.i.toLowerCase();
+	  ioft.i = ioft.i.replaceAll(/j/g,'z').replaceAll(/q/g,'k').replaceAll(
 		/v/g,'w').replaceAll(/([a-wyz])x/g,"$1ks").replaceAll(
 		/xi/g,'zi').replaceAll(/xmas/g,"chritmas").replaceAll(
 			/xr/g,'Aksr').replaceAll(/\bx/g,"Aks"); //α/g,'A').replaceAll();
-      ioz.o = ioz.i ;
+      ioft.o["inglish"] = ioft.i ;
+      // console.log("e2i::e2i ioft.o[inglish] is: \n" + ioft.o["inglish"] + "\n"); 
 }		
 module.exports = e2i
