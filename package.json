@@ -1,6 +1,6 @@
 {
   "name": "wzk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "wzk is a module to transliterate indian,srilankan,nepal,bangladesh languages",
   "main": "wzk.js",
   "scripts": {
