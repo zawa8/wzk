@@ -1,14 +1,14 @@
 {
-  "name": "kwztr",
-  "version": "1.0.3",
-  "description": "kwztr is a module to transliterate indian,srilankan,nepal,bangladesh languages",
-  "main": "kwztr.js",
+  "name": "wzk",
+  "version": "1.0.0",
+  "description": "wzk is a module to transliterate indian,srilankan,nepal,bangladesh languages",
+  "main": "wzk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zava8/kwztr.git"
+    "url": "git+https://github.com/zava8/wzk.git"
   },
   "keywords": [
     "language",
@@ -31,7 +31,7 @@
   "author": "vimalkg@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zava8/kwztr/issues"
+    "url": "https://github.com/zava8/wzk/issues"
   },
-  "homepage": "https://github.com/zava8/kwztr#readme"
+  "homepage": "https://github.com/zava8/wzk#readme"
 }
