@@ -1,6 +1,6 @@
-# this repository is for npmjs kwztr package.
+# this repository is for npmjs wzk package.
 by hscii(uname) email : heksadesiml@gmail.com
-kwztr is a module to transliterate indian languages.
+wzk is a module to transliterate indian languages.
 
 1. assαmi
 1. bengαli/banglα
@@ -21,8 +21,8 @@ this module to be used in the webextension:
 
 ### source code eksecution phlo
 
-1. package.json -> main is called/run : ("main": "kwztr.js" , kwztr.js)
-2. class kwztr
+1. package.json -> main is called/run : ("main": "wzk.js" , wzk.js)
+2. class wzk
    1. transliterate(input_str,a2b=u2i)
    2. transliterate_dom_node(node_arg, a2b=u2i)
    3. untransliterate_dom_node()
@@ -43,7 +43,7 @@ heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
 
 1. git clone ... # this repozitri
 2. change source(do not change version in package.json, npm version command in next step vill change version no) if needed
-2. test : kwztr/test $node script.js
+2. test : wzk/test $node script.js
 3. if tests passed then only : git commit & publish
 
   > git add . ; git commit -am "some comments" ; git push
@@ -61,9 +61,9 @@ heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
 1. import library as in your js file:
 
 ```js
-import kwztr from 'kwztr';
+import wzk from 'wzk';
 const unicode_str = 'हिन्दी विकिपीडिया' ;
-let t = new kwztr();
-let ing31str = t.transliterate(unicode_str,"u2i");
+let t = new wzk();
+let ing4str = t.transliterate(unicode_str,"u2i"); // ing4 : 4αԃɦт=ADHT
 
 [code_map_sheet]: https://docs.google.com/spreadsheets/d/e/2PACX-1vRYY_On0oQlYqCH8KrAuNy9nxnUKRx9dG6UvjoZjbP1ZVeXX6VcHl-sU2yg9jbAFszCcNZ5STK47_rz/pubhtml
