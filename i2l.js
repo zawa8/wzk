@@ -69,29 +69,6 @@ const i2l = (ioft) => {
     	indeks++;
   	}
 
-	/*
-	 * ioft.o =
-		"modern_hinԃi: " + oarr[0] + "\n\n" +
-		"modern_ing4:[a-z]+4αԃɦт: " + ioft.i + "\n\n" +
-		"modern_punzαbi gurmukhi: " + oarr[2] + "\n\n" +
-		"modern_bαnglα bengαli: " + oarr[1] + "\n\n" +
-		"modern_тelugu: " + oarr[5] + "\n\n" +
-		"modern_korean: " + oarr[10] + "\n\n" +
-		"modern_тamil: " + oarr[9] + "\n\n" +
-		"modern_kannadα: " + oarr[6] + "\n\n" +
-        "modern_malayαlam: " + oarr[7] + "\n\n" +
-        "modern_odiα/oriyα: " + oarr[4] + "\n\n" +
-		"modern_russian: " + oarr[11] + "\n\n" +
-        "modern_sinhalα: " + oarr[8] + "\n\n" +
-        "modern_guzrαтi: " + oarr[3];
-	ioft.o = ioft.o.replace(
-		/([KZTDJQBS])/g, function(v) { return v.toLowerCase()+"h"; }
-		).replace(/j/g, 'т').replace(/q/g, 'ԃ');
-	ioft.o = ioft.o + "\n\ninglish4:4αԃɦт.\n" +
-		"ααm ααԃmi ki zrurт : bhαsα anek , likhαi anek , sbme 8aiueohcg ek.\n" +
-		"wn wowels(8αiueohcg) wn indiα wn bhαrT great indiα\n" +
-		"https://ztr8.vercel.app/ -> font\n^*englosoftw8utf.ttf/woff2 *=tamil/hindi/korean/russian/sinhala/etc.../\nandroid/chrome/firefox/windows/linux\n";
-		*/
 }
 module.exports = i2l
 

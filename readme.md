@@ -22,12 +22,16 @@ this module to be used in the webextension:
 ### source code eksecution phlo
 
 1. package.json -> main is called/run : ("main": "wzk.js" , wzk.js)
-2. class wzk
+2. class wzk 
    1. transliterate(input_str,a2b=u2i)
    2. transliterate_dom_node(node_arg, a2b=u2i)
    3. untransliterate_dom_node()
 
-ztr_direction_const values can be :
+from values can be :
+1.
+2.
+3.
+
 1. u2i for unicode indian/sinhalα scripts to ińglish31 : 26a-z + 5ADHTN/αԃɦтń
 
 ascii510 : american standard code for information interchange
@@ -35,9 +39,9 @@ decimal digits : 0 1 2 3 4 5 6 7 8 9
 5+5=10
 
 hscii810 : heksadesiml standard kode for informesn interchenz
-heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
+heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 L Y V W P F
 8+8=10=wnti=4*4=solɦ=ekti
-[4 finger maтhs](https://github.com/zawa4s)
+[4 finger maтhs](https://github.com/zawa8)
 
 ### steps to clone , build , test & publish
 
@@ -62,8 +66,8 @@ heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
 
 ```js
 import wzk from 'wzk';
-const unicode_str = 'हिन्दी विकिपीडिया' ;
-let t = new wzk();
-let ing4str = t.transliterate(unicode_str,"u2i"); // ing4 : 4αԃɦт=ADHT
+const indikstr = 'हिन्दी विकिपीडिया' ;
+let wzkobz = new wzk();
+let ing4str = wzkobz.itr(indikstr,"both","hindi"); // ing4 : 4αԃɦт=ADHT
 
 [code_map_sheet]: https://docs.google.com/spreadsheets/d/e/2PACX-1vRYY_On0oQlYqCH8KrAuNy9nxnUKRx9dG6UvjoZjbP1ZVeXX6VcHl-sU2yg9jbAFszCcNZ5STK47_rz/pubhtml
