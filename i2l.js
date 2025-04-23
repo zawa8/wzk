@@ -55,8 +55,14 @@ const i2l = (ioft) => {
 			case "inglish":				
 			break;
 			case "all":
+			console.log(`i2l.js case all i2il_dikt_keys is ${i2il_dikt_keys}: \n`); 
 				i2il_dikt_keys.forEach(key => {
-					if (chr_indeks > -1) { ioft.o[key] += i2il_dikt[key][chr_indeks]; }
+					//console.log(`i2l.js case all: indeks is ${indeks} curr_chr is ${curr_chr}\n`); 
+					//console.log(`i2l.js case all: key is ${key} chr_indeks is ${chr_indeks}\n`); 
+					if (chr_indeks > -1) {
+						ioft.o[key] += i2il_dikt[key][chr_indeks];
+						console.log("key is " + key + " and ioft.o[key] is " + ioft.o[key] + "\n"); 
+					}
 					else { ioft.o[key] += curr_chr; }
 				});						
 			break;

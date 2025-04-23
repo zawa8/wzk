@@ -1,22 +1,23 @@
 const duztr = require('./duztr.js');
 class wzk {
-  itr(inputstr,from,tu) { // console.log("wzk::itr" + "\n"); 
-    let ioft = { i: inputstr , o: {} , f: from, t:tu } ;
-    	const tu_langs = [
+  itr(inputstr,from,tu) { console.log("wzk::itr" + "\n"); 
+	const tu_langs = [
 		"inglish", "hindi", "bangla", "gurmukhi", "guzrati",
 		"oriya", "telugu", "kannada", "malayalam",
 		"sinhala", "tamil", "korean", "russian"
 	];
     if (tu_langs.includes(tu)) {
 		ioft = {i:inputstr, o:{}, f:from, t:tu}
-		// console.log("yes includes calling duztr" + "\n"); 
+		console.log("yes includes calling duztr" + "\n"); 
 		duztr(ioft);
 		return(ioft.o[tu]);
 	}
     else { return inputstr; }    
   }
   /////////////////
-  ioft_tr(ioft) { duztr(ioft); }
+  ioft_tr(ioft) {
+	  duztr(ioft);
+   }
   /////////////////
 		
   transliterate_dom_node(node_arg,tu) {

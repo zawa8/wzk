@@ -61,6 +61,6 @@ const u2i = (ioft) => {
 		indeks++;
     }
     u2i_post(ioft);
-    // console.log("u2i::u2i ioft.o[inglish] is: \n" + ioft.o["inglish"] + "\n"); 
+    console.log("u2i::u2i ioft.o[inglish] is: \n" + ioft.o["inglish"] + "\n"); 
 }
 module.exports = u2i

@@ -115,6 +115,6 @@ const e2i = (ioft) => {
 		/xi/g,'zi').replaceAll(/xmas/g,"chritmas").replaceAll(
 			/xr/g,'Aksr').replaceAll(/\bx/g,"Aks"); //α/g,'A').replaceAll();
       ioft.o["inglish"] = ioft.i ;
-      // console.log("e2i::e2i ioft.o[inglish] is: \n" + ioft.o["inglish"] + "\n"); 
+      console.log("e2i::e2i ioft.o[inglish] is: \n" + ioft.o["inglish"] + "\n"); 
 }		
 module.exports = e2i
