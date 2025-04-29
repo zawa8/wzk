@@ -1,6 +1,21 @@
 const duztr = require('./duztr.js');
 class wzk {
-  itr(inputstr,from,tu) { console.log("wzk::itr" + "\n"); 
+  xvjqK2hindi(inputstr) {
+	  return inputstr.replaceAll(
+	  "q", "द").replaceAll("j", "त").replaceAll(
+	  "Q", "ध").replaceAll("J", "थ").replaceAll(
+	  "K", "ख").replaceAll("Z", "झ").replaceAll("T", "ठ").replaceAll("D", "ढ").replaceAll(
+	  "B", "भ").replaceAll("S", "श").replaceAll(
+	  "x", "अ").replaceAll("v", "ह");
+  }
+  kh2hindiK(inputstr) {
+	  return inputstr.replaceAll(
+	  /([kztdjqbs])h/g, "$1___").replaceAll(
+	  "q___", "ध").replaceAll("j___", "थ").replaceAll(
+	  "k___", "ख").replaceAll("z___", "झ").replaceAll("t___", "ठ").replaceAll("d___", "ढ").replaceAll(
+	  "b___", "भ").replaceAll("s___", "श");
+  }
+  itr(inputstr,from,tu) { //console.log("wzk::itr" + "\n"); 
 	const tu_langs = [
 		"inglish", "hindi", "bangla", "gurmukhi", "guzrati",
 		"oriya", "telugu", "kannada", "malayalam",
@@ -8,7 +23,7 @@ class wzk {
 	];
     if (tu_langs.includes(tu)) {
 		ioft = {i:inputstr, o:{}, f:from, t:tu}
-		console.log("yes includes calling duztr" + "\n"); 
+		//console.log("yes includes calling duztr" + "\n"); 
 		duztr(ioft);
 		return(ioft.o[tu]);
 	}
