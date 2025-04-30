@@ -1,36 +1,12 @@
-/*
- * ********************* others
- * compart.com/en/unicode/block/
- * https://www.compart.com/en/unicode/U+03B1
- * (U+00A3 £) (U+00A2 ¢) (U+00E0 à) (U+00E1 á) (U+0103 ă) (U+0127 ħ) (U+0144 ń)
- * (U+0253 ɓ) (U+0256 ɖ) (U+0257 ɗ) (U+0266 ɦ) (U+0267 ɧ) (U+0271 ɱ) (U+029c small ʜ)
- * (U+03B1 α) (U+03C4 τ)
- * (U+043D small_н) (U+0442 small_т) (U+045B ћ)
- * (U+0502 Ԃ) (U+0503 ԃ) (U+050F ԏ)
-**********************
-**********************
-**********************
-********************** most liked ADHTN
- * ɦ(small_0266) (U+0144 ń) (U+03B1 α) 
- * (U+03C4 τ) (U+0442 small_т) (U+0503 ԃ) 
- * ɧ(small_0267) (U+00A2 ¢) (U+0256 ɖ) (U+0257 ɗ)
-**********************
-**********************
-
-********************** most liked others
- * ɓ(small_0253) ɱ(small_0271) (U+00A3 £) (U+00A2 ¢)
-**********************
-**********************
-**********************/
-const Hh2phonetic_H = (ioft) => { 
-    ioft.i = ioft.i.replaceAll(
+function Hh2phonetic_H(){ 
+    this.istr = this.istr.replaceAll(
       /H/g, "h").replaceAll(
       /(\s)h/g, "$1H").replaceAll(
       /([^kgcꞇćjztdpbswटडपबसԃᴛ])h/ig, "$1H");
 }
 //////// ñṅ ꟈԃ[ɦꟈđꞇṅᴀ]ɦԃćńàᴀ
-const Nn2phonetic_N = (ioft) => {
-    ioft.i = ioft.i.replaceAll(
+function Nn2phonetic_N(){
+    this.istr = this.istr.replaceAll(
 		/N/g,"n").replaceAll(
 		/n([cgk])\b/ig,"ṅ$1").replaceAll(/\bn/ig,"ñ").replaceAll(
 		/([a-z])nk/ig,"$1ṅk").replaceAll(/oung/ig,"ouṅg").replaceAll(
@@ -57,8 +33,8 @@ const Nn2phonetic_N = (ioft) => {
 		/ñ/g,"n");
 }
 // à
-const Ww2vv = (ioft) => {
-    ioft.i = ioft.i.replaceAll(
+function Ww2vv(){
+    this.istr = this.istr.replaceAll(
 		/W/g,"w").replaceAll(
 		/away/ig,"àⱱày").replaceAll(/war([ey])/ig,"ⱱàr$1").replaceAll(/wa([nrs])/ig,"ⱱα$1").replaceAll(
 		/who/ig,"ẃहo").replaceAll(/wr/ig,"ẃr").replaceAll(/\bw/ig,"ⱱ").replaceAll(
@@ -71,8 +47,8 @@ const Ww2vv = (ioft) => {
 		/ẃ/g,"w").replaceAll(/ⱱ/g,"W");
 }
 // àα
-const Aa2phonetic_Aa = (ioft) => {
-	ioft.i = ioft.i.replaceAll(
+function Aa2phonetic_Aa(){
+	this.istr = this.istr.replaceAll(
 		/A/g,"a").replaceAll(
 		/aft/ig,"αft").replaceAll(/aw([kf\s])/ig,"αw$1").replaceAll(
 		/\bar([cekmst])\b/ig,"αr$1").replaceAll(/guar/ig,"guαr").replaceAll(
@@ -101,20 +77,45 @@ const Aa2phonetic_Aa = (ioft) => {
 	/las([skmt])/ig,'lαs$1');
 }
 // ɦ ⱱ
-const e2i = (ioft) => {
+function e2i(){
       //Hh2phonetic_H(ioft);
       //Nn2phonetic_N(ioft); 
       //Ww_to_vv(ioft);	
       //Aa2phonetic_Aa(ioft);
-      //ioft.i.value = ioft.i.value.replaceAll(/c/ig,'ć'); ///ꞇ
+      //this.istr.value = this.istr.value.replaceAll(/c/ig,'ć'); ///ꞇ
       // ɦHɦĥ
-      //ioft.i = ioft.i.replaceAll(/H/g,'ɦ').replaceAll(/N/g,'ń').replaceAll(/à/g,'a'); //α/g,'A').replaceAll();
-      ioft.i = ioft.i.toLowerCase();
-	  ioft.i = ioft.i.replaceAll(/j/g,'z').replaceAll(/q/g,'k').replaceAll(
+      //this.istr = this.istr.replaceAll(/H/g,'ɦ').replaceAll(/N/g,'ń').replaceAll(/à/g,'a'); //α/g,'A').replaceAll();
+      this.istr = this.istr.toLowerCase();
+	  this.istr = this.istr.replaceAll(/j/g,'z').replaceAll(/q/g,'k').replaceAll(
 		/v/g,'w').replaceAll(/([a-wyz])x/g,"$1ks").replaceAll(
 		/xi/g,'zi').replaceAll(/xmas/g,"chritmas").replaceAll(
 			/xr/g,'Aksr').replaceAll(/\bx/g,"Aks"); //α/g,'A').replaceAll();
-      ioft.o["inglish"] = ioft.i ;
-      console.log("e2i::e2i ioft.o[inglish] is: \n" + ioft.o["inglish"] + "\n"); 
+      this.odikt["inglish"] = this.istr ;
+      console.log("e2i::e2i this.odikt[inglish] is: \n" + this.odikt["inglish"] + "\n"); 
 }		
-module.exports = e2i
+module.exports = { e2i , Hh2phonetic_H, Aa2phonetic_Aa, Ww2vv, Nn2phonetic_N}
+
+/*
+ * ********************* others
+ * compart.com/en/unicode/block/
+ * https://www.compart.com/en/unicode/U+03B1
+ * (U+00A3 £) (U+00A2 ¢) (U+00E0 à) (U+00E1 á) (U+0103 ă) (U+0127 ħ) (U+0144 ń)
+ * (U+0253 ɓ) (U+0256 ɖ) (U+0257 ɗ) (U+0266 ɦ) (U+0267 ɧ) (U+0271 ɱ) (U+029c small ʜ)
+ * (U+03B1 α) (U+03C4 τ)
+ * (U+043D small_н) (U+0442 small_т) (U+045B ћ)
+ * (U+0502 Ԃ) (U+0503 ԃ) (U+050F ԏ)
+**********************
+**********************
+**********************
+********************** most liked ADHTN
+ * ɦ(small_0266) (U+0144 ń) (U+03B1 α) 
+ * (U+03C4 τ) (U+0442 small_т) (U+0503 ԃ) 
+ * ɧ(small_0267) (U+00A2 ¢) (U+0256 ɖ) (U+0257 ɗ)
+**********************
+**********************
+
+********************** most liked others
+ * ɓ(small_0253) ɱ(small_0271) (U+00A3 £) (U+00A2 ¢)
+**********************
+**********************
+**********************/

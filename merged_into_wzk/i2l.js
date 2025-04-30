@@ -1,80 +1,39 @@
-// ㅋKㅈZㅌT다DjJqQㄴㅍf바Bㅁㅑ라l봐Sㅅㅎㅏ
-// kKzZtTdDjJqQnpfbBmyrlwSsɦa
-// कखजझटठडढतथदधनपफबभमयरलवशसहअ
-// kKzZtTdDjJqQnpfbBmyrlSs
-// কখজঝটঠডঢতথদধনপফবভমযরলwশসহঅ
-// ਕਖਜਝਟਠਡਢਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸ਼ਸਹਅ
-// કખજઝટઠડઢતથદધનપફબભમયરલવશસહઅ
-// କଖଜଝଟTଡଢତଥଦଧନପଫବଭମଯରଲଵଶସହଅ
-// కఖజఝటఠడఢతథదధనపఫబభమయరలవశసహఅ
-// ಕಖಜಝಟಠಡಢತಥದಧನಪಫಬಭಮಯರಲವಶಸಹಅ
-// കഖജഝടഠഡഢതഥദധനപഫബഭമയരലവശസഹഅ
-// කඛජඣටඨඩඪතථදධනපඵබභමයරලවශසහඅ
-// கKஜZடTdDதJqQநபfbBமயரலவஶஸஹஅ
-///////[ɦꟈđꞇṅᴀ]ɦԃćńà
-const i2l = (ioft) => {
-	//alert("abc");
-	const i2il_dikt = {
-		hindi: "कखजझटठडढतथदधनपफबभमयरलशसहअव",
-		bangla: "কখজঝটঠডঢতথদধনপফবভমযরলশসহঅw",
-		gurmukhi: "ਕਖਜਝਟਠਡਢਤਥਦਧਨਪਫਬਭਮਯਰਲਸ਼ਸਹਅਵ",
-		guzrati: "કખજઝટઠડઢતથદધનપફબભમયરલશસહઅવ",
-		oriya: "କଖଜଝଟTଡଢତଥଦଧନପଫବଭମଯରଲଶସହଅଵ",
-		telugu: "కఖజఝటఠడఢతథదధనపఫబభమయరలశసహఅవ",
-		kannada: "ಕಖಜಝಟಠಡಢತಥದಧನಪಫಬಭಮಯರಲಶಸಹಅವ",
-		malayalam: "കഖജഝടഠഡഢതഥദധനപഫബഭമയരലശസഹഅവ",
-		sinhala: "කඛජඣටඨඩඪතථදධනපඵබභමයරලශසහඅව",
-		tamil: "கKஜZடTdDதJqQநபfbBமயரலஶஸஹஅவ",
-		korean: "ㅋKㅈZㅌT다DjJqQㄴㅍf바Bㅁㅑ라lSㅅㅎㅏ봐",
-		russian: "kKzZtTдДtTдДнпфбБмйрлщшɦa",
-	};
-	/* https://tandem.net/blog/russian-alphabet
-	 *  "kKzZtTдДtTдДнпфбБмйрлщшහඅව"
-	 * К б_b ,  д_d  , з_z , й_y , k_k     л_l  м_m   р_r   п_p   
-	 *   н_n в_w
-	 * */
-	const inputLength = ioft.i.length;
-	//ioft.o = {}; 
-	//const oarr = Array(11).fill("");
+// const i2l = (ioft) => {
+function i2l() { //alert("in i2l");
+	const inputLength = this.istr.length;
 	let indeks = 0; 
 	let curr_chr = ''; 
-	// let nekst_char: string = '';
-	const hinchars = "kKzZtTdDjJqQnpfbBmyrlSsɦA"; // ɦa"; 
-	const i2il_dikt_keys = Object.keys(i2il_dikt);
-//////////////////
-//	const ing32: string = ioft.i.replace(
-//		/([KZTDJQBS])/g, function(v) { return v.toLowerCase()+"h"; }
-//		).replace(/j/g, 'т').replace(/q/g, 'ԃ');
-//////////////////
-	while (indeks < inputLength) {
-		curr_chr = ioft.i[indeks];
-		const chr_indeks = hinchars.indexOf(curr_chr); 
-		//for (let i = 0; i < i2il_dikt.length; i++) {
-		switch(ioft.t)
+	//const i2il_dikt_keys = Object.keys(i2l_dikt);
+	//for (const key in myObject) {
+	while (indeks < ini2il_diktputLength) {
+		curr_chr = this.istr[indeks];
+		const chr_indeks = wzk.hinchars.indexOf(curr_chr); 
+		//for (let i = 0; i < i2l_dikt.length; i++) {
+		switch(this.tostr)
 		{
 			case "inglish":				
 			break;
 			case "all":
-			console.log(`i2l.js case all i2il_dikt_keys is ${i2il_dikt_keys}: \n`); 
-				i2il_dikt_keys.forEach(key => {
+			//console.log(`i2l.js case all i2il_dikt_keys is ${i2il_dikt_keys}: \n`); 
+				//i2il_dikt_keys.forEach(key => {
+				for (const key in wzk.i2l_dikt) {
 					//console.log(`i2l.js case all: indeks is ${indeks} curr_chr is ${curr_chr}\n`); 
 					//console.log(`i2l.js case all: key is ${key} chr_indeks is ${chr_indeks}\n`); 
 					if (chr_indeks > -1) {
-						ioft.o[key] += i2il_dikt[key][chr_indeks];
-						console.log("key is " + key + " and ioft.o[key] is " + ioft.o[key] + "\n"); 
+						this.odikt[key] += wzk.i2l_dikt[key][chr_indeks];
+						//console.log("key is " + key + " and this.odikt[key] is " + this.odikt[key] + "\n"); 
 					}
-					else { ioft.o[key] += curr_chr; }
-				});						
+					else { this.odikt[key] += curr_chr; }
+				};						
 			break;
 			default:
-				if (i2il_dikt_keys.includes(ioft.t)) {
-					if (chr_indeks > -1) { ioft.o[ioft.t] += i2il_dikt[ioft.t][chr_indeks]; }
-					else { ioft.o[ioft.t] += curr_chr; }					
+				if (this.tostr in wzk.i2l_dikt) {
+					if (chr_indeks > -1) { this.odikt[this.tostr] += i2l_dikt[this.tostr][chr_indeks]; }
+					else { this.odikt[this.tostr] += curr_chr; }					
 				}
 		}
     	indeks++;
   	}
-
 }
 module.exports = i2l
 
@@ -113,7 +72,7 @@ module.exports = i2l
 //(?1A)(?2k)(?3z)(?4t)(?5d)(?6T)(?7D)(?8n)(?9p)(?10f)(?11b)(?12m)(?13y)(?14r)(?15L)(?16v)(?17s)(?18H)
 //(?19)(?20)(?21)(?22)(?23)(?24)(?25)(?26)(?27)(?28)(?29)
 
-// curr_chr = ioft.i.value[indeks];
+// curr_chr = this.istr.value[indeks];
 // curr_char_code = curr_chr.charCodeAt();
 // curr_lang_code = (curr_char_code/0x80)>>0 ;
 // curr_char_modulo = curr_char_code % 0x80 ;
@@ -192,3 +151,22 @@ module.exports = i2l
 ///////////////bilo google sheet
 ///// https://docs.google.com/spreadsheets/d/1ybvAdQSnIU9hhxNY_VTY3PWEGqP5prY210G-wAH9Ey0/edit?usp=sharing
 ///////////////
+	/* https://tandem.net/blog/russian-alphabet
+	 *  "kKzZtTдДtTдДнпфбБмйрлщшහඅව"
+	 * К б_b ,  д_d  , з_z , й_y , k_k     л_l  м_m   р_r   п_p   
+	 *   н_n в_w
+	 * */
+// ㅋKㅈZㅌT다DjJqQㄴㅍf바Bㅁㅑ라l봐Sㅅㅎㅏ
+// kKzZtTdDjJqQnpfbBmyrlwSsɦa
+// कखजझटठडढतथदधनपफबभमयरलवशसहअ
+// kKzZtTdDjJqQnpfbBmyrlSs
+// কখজঝটঠডঢতথদধনপফবভমযরলwশসহঅ
+// ਕਖਜਝਟਠਡਢਤਥਦਧਨਪਫਬਭਮਯਰਲਵਸ਼ਸਹਅ
+// કખજઝટઠડઢતથદધનપફબભમયરલવશસહઅ
+// କଖଜଝଟTଡଢତଥଦଧନପଫବଭମଯରଲଵଶସହଅ
+// కఖజఝటఠడఢతథదధనపఫబభమయరలవశసహఅ
+// ಕಖಜಝಟಠಡಢತಥದಧನಪಫಬಭಮಯರಲವಶಸಹಅ
+// കഖജഝടഠഡഢതഥദധനപഫബഭമയരലവശസഹഅ
+// කඛජඣටඨඩඪතථදධනපඵබභමයරලවශසහඅ
+// கKஜZடTdDதJqQநபfbBமயரலவஶஸஹஅ
+///////[ɦꟈđꞇṅᴀ]ɦԃćńà
